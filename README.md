@@ -57,3 +57,5 @@ This playbook evolves over time, sometimes with backward-incompatible changes.
 
 When updating the playbook, refer to [the changelog](CHANGELOG.md) to catch up with what's new.
 
+## Acknowledgments
+This project is based on the work of [matrix ansible](https://github.com/spantaleev/matrix-docker-ansible-deploy).
