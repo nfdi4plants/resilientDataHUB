@@ -5,7 +5,7 @@
 
 This [Ansible](https://www.ansible.com/) playbook automates the deployment of a High Availability GitLab instance with Keycloak Single Sign-On (SSO). The setup includes multiple GitLab nodes for improved reliability and scalability. It uses Ansible roles and variables to make the deployment process modular and customizable. The Keycloak instance runs in a Docker container, while GitLab is deployed directly. Additionally, a reverse proxy is configured to manage the traffic. 
 This setup allows for seamless automation of infrastructure deployment while ensuring secure access through Keycloak.
-The setup also includes Data Replication with DRBD and distributed storage with Ceph on de.NBI cloud.
+The setup also includes Data Replication with DRBD and distributed storage with Ceph on de.NBI cloud. 
 
 
 ## Prerequisites
