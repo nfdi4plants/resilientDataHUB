@@ -3,9 +3,9 @@
 
 ## Purpose
 
-This [Ansible](https://www.ansible.com/) playbook automates the deployment of a High Availability GitLab instance with Keycloak Single Sign-On (SSO). The setup includes multiple GitLab nodes for improved reliability and scalability. It uses Ansible roles and variables to make the deployment process modular and customizable. The Keycloak instance runs in a Docker container (see [the container images used](docs/container-images.md)), while GitLab is deployed directly. Additionally, a reverse proxy is configured to manage the traffic.
+This [Ansible](https://www.ansible.com/) playbook automates the deployment of a High Availability GitLab instance with Keycloak Single Sign-On (SSO). The setup includes multiple GitLab nodes for improved reliability and scalability. It uses Ansible roles and variables to make the deployment process modular and customizable. The Keycloak instance runs in a Docker container (see [the container images used](docs/container-images.md)), while GitLab is deployed directly. Additionally, a reverse proxy is configured to manage the traffic. 
 This setup allows for seamless automation of infrastructure deployment while ensuring secure access through Keycloak.
-
+The setup also includes Data Replication with DRBD and distributed storage with Ceph on de.NBI cloud.
 
 
 ## Prerequisites
@@ -14,11 +14,13 @@ This setup allows for seamless automation of infrastructure deployment while ens
 - A domain name pointing to the IP address of the reverse proxy.
 - SSH access to all target servers with sudo privileges.
 - A basic understanding of GitLab and its architecture.
-- Inventory file is configured with the target server details.
+The inventory file is configured with the target server details.
 
 
-[Installation](docs/README.md) (upgrades) and some maintenance tasks are automated using [Ansible](https://www.ansible.com/) (see [our Ansible guide](docs/ansible.md)).
-
+## Configuration
+- Inventory File: Modify the `inventory.ini` file with your target server details.
+- In the `roles` repository, there are sub-repositories for GitLab, Keycloak, and nginix-proxy. Edit Variables, yml files, and config files located in each sub-repository to match your environment.
+- 
 
 ## Supported services
 
